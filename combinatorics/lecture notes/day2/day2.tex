@@ -1,0 +1,95 @@
+\documentclass[a4paper]{exam}
+
+\usepackage{amssymb}
+\usepackage[a4paper]{geometry}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+\usepackage{arabtex}
+\usepackage{utf8}
+\setcode{utf8}
+
+
+\setlength\parindent{0pt}
+\newcommand{\class}{Combinatorics}
+\newcommand{\term}{Summer 2024}
+\newcommand\heading[1]{\textbf{#1}}
+
+\runningheader{\class, \term}{}{}
+\runningheadrule
+\runningfootrule
+\runningfooter{}{Page \thepage\ of \numpages}{}
+
+\qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
+\boxedpoints
+
+\title{\<مدرسه رياضيات>} 
+\author{\class}
+\date{\term}
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+\maketitle
+
+\section*{Introduction}
+    just two lines on however we introduced combinatorics.
+
+\section*{Sum Rule}
+    When you have to perform two tasks and there are a certain number of ways to perform the first task and a certain number of ways to perform the other task such that \textbf{all ways are mutually exclusive} then the sum rule states:\\\\
+    \noindent\fbox{%
+        \parbox{\textwidth}{%
+            If there are $n(A)$ ways to do $A$, and distinct from them, $n(B)$ ways to do $B$, then the number of ways to do $A$ or $B$ is $n(A) + n(B)$.
+        }
+    }\\\\
+
+    Suppose the elements of sets $A$ and $B$ represent the ways to do $A$ and $B$ respectively. Then the number of ways to do $A$ or $B$ is the number of elements in the union of $A$ and $B$. If the sets $A$ and $B$ are disjoint, then the number of ways to do $A$ or $B$ is the sum of the cardinalities of $A$ and $B$ represented as $\#A + \#B$ (where $\#X$ represents the cardinality/number of elements of any set X).\\
+    This rule can be generalized to more than two sets. If the elements of the sets $A_1, A_2, \ldots, A_n$ represent the ways to do $n$ tasks such that the sets are disjoint, then the number of ways to do the $n$ tasks is the sum of the cardinalities of the sets $A_1, A_2, \ldots, A_n$ represented as $\#A_1 + \#A_2 + \ldots + \#A_n$ which can be written as $\sum_{i=1}^n\#A_i$.
+
+\section*{Product Rule}
+    When you have to perform two tasks and there are a certain number of ways to perform the first task, and for each of those ways, there are a certain number of ways to perform the second task, then the product rule states:\\\\
+    \noindent\fbox{%
+        \parbox{\textwidth}{%
+            If there are $n(A)$ ways to do $A$ and $n(B)$ ways to do $B$, then the number of ways to do $A$ then $B$ is $n(A) \times n(B)$. This is true if the number of ways for doing $A$ and $B$ are independent; the number of ways for doing $B$ does not depend on how $A$ is done.
+        }
+    }\\\\
+
+    Suppose the elements of sets $A$ and $B$ represent the ways to do $A$ and $B$ respectively. Then the number of ways to do $A$ then $B$ is the cardinality of the cartesian product of $A$ and $B$, represented as $\#(A \times B) = \#A \times \#B$.\\
+    This rule is also generalizable to more than two sets. If the elements of the sets $A_1, A_2, \ldots, A_n$ represent the ways to do $n$ consecutive tasks such that the number of ways for doing each task is independent of how the previous tasks are done, then the number of ways to do the $n$ tasks is the cardinality of the cartesian product of the sets $A_1, A_2, \ldots, A_n$ represented as $\#(A_1 \times A_2 \times \ldots \times A_n) = \#A_1 \times \#A_2 \times \ldots \times \#A_n = \prod_{i=1}^n\#A_i$.
+    
+\section*{Inclusion-Exclusion Principle}
+    The inclusion-exclusion principle is a counting technique that allows us to count the number of unique ways to do any number of tasks. Suppose you have two tasks $A$ and $B$ and you want to count the number of ways to do $A$ or $B$. The sum rule states that the number of ways to do $A$ or $B$ is $n(A) + n(B)$. However, if the ways to do $A$ and $B$ are not mutually exclusive, then the sum rule overcounts the number of ways to do $A$ or $B$. The inclusion-exclusion principle corrects this overcounting.\\\\
+    \noindent\fbox{%
+        \parbox{\textwidth}{%
+            If there are $n(A)$ ways to do $A$, $n(B)$ ways to do $B$, and $n(A \cap B)$ ways to do both $A$ and $B$, then the number of ways to do $A$ or $B$ is $n(A) + n(B) - n(A \cap B)$.
+        }
+    }\\\\
+
+    Suppose the elements of sets $A$ and $B$ represent the ways to do $A$ and $B$ respectively. Then the number of ways to do $A$ or $B$ is the number of elements in the union of $A$ and $B$. If the sets $A$ and $B$ are not disjoint, then the cardinality of the union of $A$ and $B$ is the sum of the cardinalities of $A$ and $B$ minus the cardinality of the intersection of $A$ and $B$ represented as $\#(A \cup B) = \#A + \#B - \#(A \cap B)$.\\
+    This can be generalized to more than two sets. If the elements of the sets $A_1, A_2, \ldots, A_n$ represent the ways to do $n$ tasks, then the inclusion-exclusion principle states that:\\\\
+    \noindent\fbox{%
+        \parbox{\textwidth}{%
+        Let $A_1, A_2, \ldots, A_n$ be finite sets, then the cardinality of their union is given by:
+        \begin{center}
+            $\#(A_1 \cup A_2 \cup \ldots \cup A_n) = \sum_{i=1}^n\#A_i - \sum_{1 \leq i < j \leq n}\#(A_i \cap A_j) + \sum_{1 \leq i < j < k \leq n}\#(A_i \cap A_j \cap A_k) - \ldots + (-1)^{n-1}\#(A_1 \cap A_2 \cap \ldots \cap A_n)$
+        \end{center}
+        }
+    }
+
+\section*{Division Rule}
+    When you have a task that appears to be done in $n$ ways, but it turns out that for each of the $n$ ways, there are $d$ equivalent ways to do the task, then the division rule states:\\\\
+    \noindent\fbox{%
+        \parbox{\textwidth}{%
+            If there are $n(A)$ ways to do $A$, and for each of those ways, there are $d$ equivalent ways to do the task, then the number of distinct ways to do the task is ${n(A)}/{d}$.
+        }
+    }\\\\
+
+    Suppose the finite set $A$ represents the ways to do a task. Suppose this set is the union of $n$ disjoint sets $A_1, A_2, \ldots, A_n$ such that each set $A_i$ contains $d$ equivalent ways to do the task. Then the number of distinct ways to do the task, that is $n$, is the cardinality of the set $A$ divided by $d$ represented as $\#A/d$. 
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
