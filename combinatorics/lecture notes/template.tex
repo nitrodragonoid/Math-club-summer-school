@@ -1,0 +1,54 @@
+\documentclass[a4paper]{exam}
+
+\usepackage{amssymb}
+\usepackage[a4paper]{geometry}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+\usepackage{arabtex}
+\usepackage{utf8}
+\setcode{utf8}
+
+
+\setlength\parindent{0pt}
+\newcommand{\class}{Combinatorics}
+\newcommand{\term}{Summer 2024}
+\newcommand\heading[1]{\textbf{#1}}
+
+\runningheader{\class, \term}{}{}
+\runningheadrule
+\runningfootrule
+\runningfooter{}{Page \thepage\ of \numpages}{}
+
+\qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
+\boxedpoints
+
+\title{\<مدرسه رياضيات>} 
+\author{\class}
+\date{\term}
+
+\begin{document}
+\maketitle
+
+\section*{Heading}
+    wow
+
+\section*{Another heading}
+    Something\\\\
+    \noindent\fbox{%
+        \parbox{\textwidth}{%
+            Definition
+        }
+    }\\\\
+    Something else
+
+    \subsection*{Subheading}
+        Something\\\\
+        \noindent\fbox{%
+            \parbox{\textwidth}{%
+                Definition
+            }
+        }\\\\
+        Something else
+
+\end{document}
