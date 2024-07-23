@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 \usepackage{amsmath, amssymb, amsfonts, amsthm}
 \usepackage{graphicx}
 \usepackage{hyperref}
@@ -8,6 +8,11 @@
 \usepackage{yhmath}
 \usepackage{mathdots}
 \usepackage{MnSymbol}
+\usepackage{arabtex}
+\usepackage{utf8}
+\setcode{utf8}
+
+
 
 
 \newtheorem{corrolary}{Corrolary}
@@ -27,16 +32,82 @@
 \newtheorem{proposition}{Proposition}
 \newtheorem{corollary}{Corollary}
 
-\begin{document}
 
-\title{Combinatorics Lecture Notes\\
+\title{\Huge \<مدرسه رياضيات>\\
 \vspace*{0.5cm}
-\Large Math Club Summer School
+% \huge
+\Large
+Combinatorics Lecture Notes
 }
 \author{Habib Math club}
+
+\begin{document}
+
 % \date{}
 \maketitle
 
+\section{Introduction}
+In this chapter, we introduce the pigeonhole principle and its variants. We also introduce the basics of permutation and combinations. These concepts are built on the material discussed in the previous chapters. 
+
+\section{Pigeonhole Principle}\label{sec: pigeon}
+In this section, we introduce the pigeonhole principle. 
+We also look at the reverse pigeonhole principle along with its generalization. 
+First, we look at the classic pigeonhole principle.
+
+\begin{theorem}[Pigeonhole principle]\label{thrm: pigeonhole}
+    If $n+1$ pigeons are placed in $n$ holes for $n \in \mathbb{Z}^+$, then there is at least one hole with at least two pigeons.
+\end{theorem}
+\begin{proof}
+    Suppose $n+1$ pigeons are placed in $n$ holes.
+    Assume that no hole contains at least two pigeons. Then all holes contain 0 or 1 pigeons.
+    Let $m$ be the number of holes with 0 pigeons in them, we have that $m \geq 0$. Then there are $n-m$ holes that have 1 pigeon in them.
+    Then the number of pigeons placed in holes is $n-m$, which is a contradiction as $n+1$ pigeons are placed in the holes.
+\end{proof}
+
+Now we look at the reverse pigeonhole principle.
+
+\begin{theorem}[Reverse pigeonhole principle]\label{thrm: reverse pigeonhole}
+    If $n+1$ pigeons are placed in $n$ holes for $n \in \mathbb{Z}^+$ where $n > 1$, then there is at least one hole with at most one pigeon.
+\end{theorem}
+\begin{proof}
+    Suppose $n+1$ pigeons are placed in $n$ holes for $n \in \mathbb{Z}^+$ where $n > 1$.
+    Assume that no hole contains at most one pigeon. Then all holes contain 2 or more pigeons.
+    The at least $2n$ pigeons are placed in the holes. 
+    As $n > 1$, we have that $n+1 < 2n$, so we have a contradiction as $n+1$ pigeons are placed in the holes.
+\end{proof}
+
+Now we shall look at the generalization of these principles.
+
+\begin{theorem}[Generalized pigeonhole principle]\label{thrm: pigeonhole}
+    If $n$ pigeons are placed in $k$ holes for $n,k \in \mathbb{Z}^+$, then there is at least one hole with at least $\lceil \frac{n}{k}\rceil$ pigeons.
+\end{theorem}
+\begin{proof}
+    Suppose $n$ pigeons are placed in $k$ holes for $n,k \in \mathbb{Z}^+$.
+    Assume that no hole contains at least $\lceil \frac{n}{k}\rceil$  pigeons. Then all holes contain at most $\lceil \frac{n}{k}\rceil - 1$ pigeons.
+    Then the number of pigeons placed in holes is at most $k(\lceil \frac{n}{k}\rceil - 1)$.
+    As $\lceil \frac{n}{k}\rceil < \frac{n}{k} + 1$, we have that $k(\lceil \frac{n}{k}\rceil - 1) < k((\frac{n}{k} + 1) - 1)$.
+    As $k((\frac{n}{k} + 1) - 1) = n$ we have that the number of pigeons placed in holes is less than $n$ which is a contradiction as $n$ pigeons are placed in $k$ holes.
+\end{proof}
+
+
+\begin{theorem}[Generalized reverse pigeonhole principle]\label{thrm: reverse pigeonhole}
+    If $n$ pigeons are placed in $k$ holes for $n,k \in \mathbb{Z}^+$, then there is at least one hole with at most $\lfloor \frac{n}{k}\rfloor$ pigeons.
+\end{theorem}
+\begin{proof}
+    Suppose $n$ pigeons are placed in $k$ holes for $n,k \in \mathbb{Z}^+$.
+    
+
+    Suppose $n+1$ pigeons are placed in $n$ holes for $n \in \mathbb{Z}^+$ where $n > 1$.
+    Assume that no hole contains at most one pigeon. Then all holes contain 2 or more pigeons.
+    The at least $2n$ pigeons are placed in the holes. 
+    As $n > 1$, we have that $n+1 < 2n$, so we have a contradiction as $n+1$ pigeons are placed in the holes.
+\end{proof}
+
+
+
+\section{Permutation}\label{sec: permutation}
+
+\section{Combinations}\label{sec: combination}
 
 \renewcommand\thefootnote{}
 
@@ -54,15 +125,3 @@
 
 
 
-
-
-Select all
-Type 
-Find a collaborator…
-
-@co-NP
-Shahid Hussain
-co-NP • Collaborator
-
-@manahil15w
-manahil15w
