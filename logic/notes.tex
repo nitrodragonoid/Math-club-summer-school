@@ -1,0 +1,427 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{psfrag}
+% \usepackage{arabtex}
+% \usepackage{utf8}
+% \setcode{utf8}
+
+% Other Settings
+
+\geometry{a4paper}
+
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{mygray}{RGB}{243,243,244}
+\definecolor{deepGreen}{RGB}{26,111,0}
+\definecolor{shallowGreen}{RGB}{235,255,255}
+\definecolor{deepBlue}{RGB}{61,124,222}
+\definecolor{shallowBlue}{RGB}{235,249,255}
+
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{\color{black}\thmname{#1}}
+\newtheoremstyle{myexamplestyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{\color{black}\thmname{#1}}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}
+\theoremstyle{myexamplestyle}
+\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{example}{Example}
+
+% \title{\<مدرسه رياضيات>}
+\title{Logic}
+
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+
+\subsection{Truth value}
+
+\begin{definition}
+    A truth value is a value that indicates the truth or falsity of a statement or proposition. It is usually represented as "true" or "false."
+\end{definition}
+
+\begin{example}
+    \emph{The sky is blue}. When you look up during the day, the sky is indeed blue. So, the truth value of this statement is \emph{true}. It's like answering a question with \emph{yes} or \emph{no}.
+\end{example}
+
+\begin{example}
+    \emph{Cats can fly}. The truth value of this statement is \emph{false} because cats cannot fly. So, a truth value helps us know whether a statement or idea is correct (true) or incorrect (false).
+\end{example}
+
+
+\subsection{Statement}
+
+\begin{definition}
+    A statement or proposition is a sentence that says something
+    that can be either true or false, but not both. It's like
+    claiming something.
+\end{definition}
+
+\begin{example}
+    \emph{The sun rises in the east}. This is a statement that can be checked to see if it's true or false.
+\end{example}
+
+\begin{example}
+    \emph{Elephants are smaller than mice}. This is another statement, and we can check if it's true or false.
+\end{example}
+
+In other words, a statement is any sentence that tells us something about the world and has a truth value, meaning it can be judged as true or false.
+
+
+\newpage
+
+\subsection{Logic}
+
+\begin{definition}
+    Logic is a way of thinking that helps us determine if statements or propositions are true or false. It uses rules and principles to analyze arguments and reasoning.
+\end{definition}
+
+Here's a simple way to think about it:
+
+\begin{enumerate}
+    \item \textbf{Reasoning}: Logic helps us think clearly and make good decisions. For example, if you know that "All birds have feathers" and "A robin is a bird," logic helps you conclude that "A robin has feathers."
+
+    \item \textbf{Rules}: Logic follows specific rules to make sure our thinking is correct. These rules help us avoid mistakes in our reasoning.
+
+    \item \textbf{Truth}: Logic helps us understand what is true and what is false. It provides a structured way to figure out the truth value of statements or propositions.
+\end{enumerate}
+
+
+\begin{example}
+    If we know that \emph{If it rains, the ground gets wet}, and we
+    observe that \emph{It is raining}, we can logically conclude
+    that \emph{The ground will get wet}.
+\end{example}
+
+Logic is used in many areas, like math, computer science, and everyday problem-solving, to ensure our conclusions are based on solid reasoning.
+
+\section{Connectives}
+
+\begin{definition}
+    Connectives, also called logical operators, are words or symbols
+    that connect statements to form more complex statements.
+\end{definition}
+They help us understand the relationships between different propositions and determine the overall truth value.
+
+
+\subsection{Negation}
+
+\begin{definition}
+    Negates a statement, making it the opposite of its original truth value.
+\end{definition}
+
+\begin{example}
+    \emph{It is NOT raining.} If \emph{It is raining} is true, then \emph{It is NOT raining} is false, and vice versa.
+\end{example}
+
+\subsection{Conjunction}
+\begin{definition}
+    Combines two statements and is true only if both statements are
+    true.
+\end{definition}
+
+\begin{example}
+    \emph{It is raining AND it is cold.} This is true only if both \emph{It is raining} is true and \emph{It is cold} is true.
+\end{example}
+
+\newpage
+
+\subsection{Disjunction}
+
+\begin{definition}
+    Combines two statements and is true if at least one of the
+    statements is true.
+\end{definition}
+
+\begin{example}
+    \emph{It is raining OR it is sunny.} This is true if either
+    \emph{It is raining} is true or \emph{It is sunny} is true, or
+    if both are true.
+\end{example}
+
+\subsection{Implication}
+
+\begin{definition}
+    Indicates that if the first statement is true, then the second
+    statement must also be true.
+\end{definition}
+
+\begin{example}
+    \emph{IF it rains, THEN the ground gets wet}. This means if
+    \emph{It rains} is true, then \emph{The ground gets wet} must
+    also be true.
+\end{example}
+
+There are different ways of rephrasing an implication. Let's look at
+each of these with examples to make them clear. Keep in mind an implication has the form \emph{If P, then Q}.
+
+\subsubsection{Contrapositive}
+\begin{definition}
+    The contrapositive of the implication \emph{If P, then Q} is
+    \emph{If not Q, then not P}. The contrapositive is always
+    logically equivalent to the original statement, meaning they are
+    either both true or false.
+\end{definition}
+
+\begin{example}
+    \emph{If the ground is not wet (not Q), then it does not rain (not P)}.
+\end{example}
+
+\subsubsection{Converse}
+
+\begin{definition}
+    The converse of the implication \emph{If P, then Q} is \emph{If
+        Q, then P}. The converse is not necessarily logically equivalent
+    to the original statement.
+\end{definition}
+
+\begin{example}
+    \emph{If the ground gets wet (Q), then it rains (P)}. This might
+    not always be true because the ground could get wet for other
+    reasons, like someone watering the garden.
+\end{example}
+
+\newpage
+
+\subsubsection{Inverse}
+
+\begin{definition}
+    The inverse of the implication \emph{If P, then Q} is \emph{If not P, then not Q}. The inverse is also not necessarily logically equivalent to the original statement.
+\end{definition}
+
+\begin{example}
+    \emph{If it does not rain (not P), then the ground does not get wet (not Q)}. This might not always be true for the same reason as the converse—the ground could get wet in other ways.
+\end{example}
+
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Statement} & \textbf{Example}      \\\hline
+        Original Statement & If P, then Q.         \\\hline
+        Contrapositive     & If not Q, then not P. \\\hline
+        Converse           & If Q, then P.         \\\hline
+        Inverse            & If not P, then not Q. \\\hline
+    \end{tabular}
+    \caption{Different ways of rephrasing an implication}
+\end{table}
+
+\subsection{Tautology}
+\begin{definition}
+    A tautology is a statement that is always true, regardless of the
+    truth values of its components.
+\end{definition}
+
+\begin{example}
+    \emph{All birds have feathers}.
+\end{example}
+
+\subsection{Contradiction}
+
+\begin{definition}
+    A contradiction is a statement that is always false, regardless of the truth values of its components.
+\end{definition}
+
+\begin{example}
+    \emph{The sky is blue AND the sky is not blue} is a
+    contradiction because the sky can't be both blue and not blue at
+    the same time.
+\end{example}
+
+\newpage
+
+\section{Quantifiers}
+
+\begin{definition}
+    Quantifiers are symbols or words in logic that express the
+    quantity of specimens in the domain of discourse that satisfy a
+    certain property.
+\end{definition}
+
+They help us talk about \emph{how many} things satisfy a given
+condition. There are two main types of quantifiers:
+
+\subsection{Universal Quantifier}
+
+\begin{definition}
+    The universal quantifier, denoted by the symbol $\forall$,
+    expresses that a statement is true for all elements in a set or
+    domain. It means \emph{for all} or \emph{for every}.
+\end{definition}
+
+
+\begin{example}
+    $\forall x \in \mathbb{N}, x > 0$ reads as \emph{for all $x$ in
+        the set of natural numbers, $x$ is greater than 0}. This
+    statement is true because all natural numbers are greater than 0.
+\end{example}
+
+\subsection{Existential Quantifier}
+\begin{definition}
+    The existential quantifier, denoted by the symbol $\exists$,
+    expresses that a statement is true for at least one element in a
+    set or domain. It means \emph{there exists} or \emph{there is}.
+\end{definition}
+
+
+\begin{example}
+    $\exists x \in \mathbb{N}, x > 0$ reads as \emph{There
+        exists an $x$ in the set of natural numbers such that $x$ is greater
+        than 0}. This statement is true because there are natural
+    numbers greater than 0.
+\end{example}
+
+\subsection{Negation of Universal Quantifier}
+
+The negation of a universal quantifier is an existential quantifier
+with a negated statement. Consider the statement \emph{All crows are
+    black}. The negation of this statement is \emph{Not all crows
+    are black}, which can be rewritten as \emph{There exists a crow that is not black}.
+
+\subsection{Negation of Existential Quantifier}
+
+The negation of an existential quantifier is a universal quantifier
+with a negated statement. Consider the statement \emph{Some crows
+    are black}. The negation of this statement is \emph{No crows are
+    black}, which can be rewritten as \emph{For all crows, they are not black}.
+
+\newpage
+
+\section{Proofs}
+
+Proofs are logical arguments that demonstrate the truth of a
+statement or proposition. They are used in mathematics, logic, and
+other fields to establish that something is true based on previously
+known facts, axioms, and logical reasoning. Here's a breakdown of
+what proofs are and how they work:
+
+Key Components of a Proof:
+\begin{itemize}
+    \item \textbf{Axioms or Premises}: These are the starting points or assumptions that are accepted as true without proof. In mathematics, axioms are basic truths about numbers and operations.
+    \item \textbf{Theorems or Propositions}: These are statements or claims that we want to prove. A theorem is often a significant result, while a proposition is usually a less important but still valid result.
+    \item \textbf{Logical Reasoning}: This involves using rules of logic to connect axioms and previously proven theorems to the statement we want to prove.
+    \item \textbf{Conclusion}: The end result of the proof, showing that the theorem or proposition is true.
+\end{itemize}
+
+\subsection{Direct Proof}
+
+This type of proof involves directly showing that a statement is
+true by using logical steps from the premises to the conclusion.
+
+\begin{example}
+    Prove that if \( n \) is an even number, then \( n^2 \) is even.
+    \begin{proof}
+        Assume \( n \) is even. Then \( n = 2k \) for some integer \( k \). So, \( n^2 = (2k)^2 = 4k^2 = 2(2k^2) \). Since \( 2k^2 \) is an integer, \( n^2 \) is even.
+    \end{proof}
+\end{example}
+
+
+\subsection{Proof by Cases}
+
+Proof by cases involves breaking a proof into several distinct cases and proving that the statement holds in each case.
+
+
+\begin{example}
+    Prove that for any integer \( n \), \( n^2 \) is either a multiple of 4 or one more than a multiple of 4.
+
+    \begin{proof}
+        Consider the integer \( n \). We need to consider two cases based on the parity (whether \( n \) is even or odd) of \( n \).
+
+        \textbf{Case 1: \( n \) is even}.
+        If \( n \) is even, we can write \( n = 2k \) for some
+        integer \( k \), then \( n^2 = (2k)^2 = 4k^2 \). Here,
+        \( n^2 \) is a multiple of 4.
+
+        \textbf{Case 2: \( n \) is odd}.
+        If \( n \) is odd, we can write \( n = 2k + 1 \) for some integer \( k \). Then
+        \( n^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 4(k^2 + k) + 1 \).
+        Here, \( n^2 \) is one more than a multiple of 4.
+
+        Since in both cases \( n^2 \) is either a multiple of 4 or one more than a multiple of 4, the statement is proved.
+    \end{proof}
+\end{example}
+
+\newpage
+
+\subsection{Proof by Contrapositive}
+
+Proof by contrapositive involves proving the contrapositive of the statement. The contrapositive of \emph{If \( P \), then \( Q \)} is \emph{If not \( Q \), then not \( P \)}. The contrapositive is logically equivalent to the original statement.
+
+
+\begin{example}
+    Prove that if \( n^2 \) is even, then \( n \) is even.
+
+    \begin{proof}
+
+        We will prove the contrapositive:
+
+        \begin{center}
+            \emph{If \( n \) is not even, then \( n^2 \) is not even.}
+        \end{center}
+
+        Assume \( n \) is odd, then \( n = 2k + 1 \) for some integer \( k \).
+
+        \[ n^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1 \]
+
+        Here, \( n^2 \) is of the form \( 2m + 1 \) for some integer \( m \), which means \( n^2 \) is odd.
+
+        Since we have shown that \emph{If \( n \) is odd, then \( n^2 \) is odd}, we have proven the contrapositive. Thus, the original statement \emph{If \( n^2 \) is even, then \( n \) is even} is also true.
+    \end{proof}
+\end{example}
+
+\subsection{Proof by Contradiction}
+
+This type of proof involves assuming the opposite of what you want to prove and showing that this assumption leads to a contradiction.
+
+
+\begin{example}
+    Prove that there is no largest prime number.
+    \begin{proof}
+        Assume there is a largest prime number, \( p \). Consider
+        the number \( N = p! + 1 \). \( N \) is not divisible by any
+        prime number less than or equal to \( p \), which means
+        \( N \) is either prime itself or divisible by a prime
+        larger than \( p \). This contradicts the assumption that
+        \( p \) is the largest prime.
+    \end{proof}
+\end{example}
+
+\subsection{Proof by Induction}
+
+This type of proof is used to prove statements about all natural numbers. It involves two steps: the base case and the inductive step.
+
+\begin{example}
+    Prove that the sum of the first \( n \) natural numbers is
+    \( \displaystyle\frac{n(n+1)}{2} \).
+
+    \begin{proof}
+
+        \textbf{Base case:} For \( n = 1 \), the sum is
+        \(\displaystyle 1 = \frac{1(1+1)}{2} \), which is true.
+
+        \textbf{Inductive step:} Assume the formula is true for some \( n = k \). Then the sum of the first \( k \) numbers is \( \frac{k(k+1)}{2} \). For \( n = k+1 \), the sum is
+
+        \[\frac{k(k+1)}{2} + (k+1) = \frac{k(k+1) + 2(k+1)}{2} = \frac{(k+1)(k+2)}{2}\]
+
+        Thus, the formula holds for \( k+1 \).
+    \end{proof}
+\end{example}
+
+\end{document}
+
