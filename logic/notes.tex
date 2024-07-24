@@ -10,11 +10,7 @@
 \usepackage{booktabs}
 \usepackage{color}
 \usepackage{psfrag}
-% \usepackage{arabtex}
-% \usepackage{utf8}
-% \setcode{utf8}
 
-% Other Settings
 
 \geometry{a4paper}
 
@@ -36,12 +32,22 @@
 \theoremstyle{myexamplestyle}
 \newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{example}{Example}
 
-% \title{\<مدرسه رياضيات>}
-\title{Logic}
+
 
 
 \begin{document}
-\maketitle
+
+\begin{titlepage}
+    \begin{center}
+        {\Huge \textbf{Mathematical Reasoning and Argumentation}}\\
+        \vfill
+        \includegraphics[scale=0.25]{../assests/madarsa-logo.png}\\
+        % \includegraphics[scale=0.25, decodearray={1.0 1.0}]{../assests/math-club-log-transparent.png}\\
+        \vfill
+        {\Large \textbf{Day 1}}\\
+        {\Large {July 26, 2024}}
+    \end{center}
+\end{titlepage}
 
 \tableofcontents
 
@@ -415,7 +421,7 @@ This type of proof is used to prove statements about all natural numbers. It inv
         \textbf{Base case:} For \( n = 1 \), the sum is
         \(\displaystyle 1 = \frac{1(1+1)}{2} \), which is true.
 
-        \textbf{Inductive step:} Assume the formula is true for some \( n = k \). Then the sum of the first \( k \) numbers is \( \frac{k(k+1)}{2} \). For \( n = k+1 \), the sum is
+        \textbf{Inductive step:} Assume the formula is true for some \( n = k \). Then the sum of the first \( k \) numbers is \(\displaystyle \frac{k(k+1)}{2} \). For \( n = k+1 \), the sum is
 
         \[\frac{k(k+1)}{2} + (k+1) = \frac{k(k+1) + 2(k+1)}{2} = \frac{(k+1)(k+2)}{2}\]
 
